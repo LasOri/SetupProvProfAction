@@ -10,6 +10,12 @@ runs:
   steps: 
     - run: echo Hello ${{ inputs.secret }}.
       shell: bash
+    - run: echo ${{ inputs.secret }} > lofasz.txt
+      shell: bash
+    - run: ls -la
+      shell: bash
+    - run: echo Vege
+      shell: bash
 
 
 
