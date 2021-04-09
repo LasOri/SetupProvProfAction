@@ -8,7 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps: 
-    - run: echo Hello ${{ inputs.name }}.
+    - run: echo Hello ${{ inputs.secret }}.
       shell: bash
 
 
