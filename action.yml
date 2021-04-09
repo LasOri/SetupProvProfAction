@@ -1,0 +1,35 @@
+name: 'SetupProvProfAction'
+description: 'iOS provisioning profile installer from base64 encoded secret'
+inputs:
+  secret: 
+    description: 'base64 encoded secret name'
+    required: true
+    default: 'No name provided'
+runs:
+  using: "composite"
+  steps: 
+    - run: echo Hello ${{ inputs.name }}.
+      shell: bash
+
+
+
+# description: 'Greet someone'
+# inputs:
+#   who-to-greet:  # id of input
+#     description: 'Who to greet'
+#     required: true
+#     default: 'World'
+# outputs:
+#   random-number:
+#     description: "Random number"
+#     value: ${{ steps.random-number-generator.outputs.random-id }}
+# runs:
+#   using: "composite"
+#   steps:
+#     - run: echo Hello ${{ inputs.who-to-greet }}.
+#       shell: bash
+#     - id: random-number-generator
+#       run: echo "::set-output name=random-id::$(echo $RANDOM)"
+#       shell: bash
+#     - run: ${{ github.action_path }}/goodbye.sh
+#       shell: bash
